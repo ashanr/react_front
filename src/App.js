@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
+function App({}) {
+
+  const [emotion, setEmotion] = useState("happy");
+
+  console.log(emotion);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello from {emotion}
         </p>
+        <button onClick={() => setEmotion("sad")}>Sad</button>
+        <button onClick={() => setEmotion("sad")}>Happy</button>
         <a
           className="App-link"
           href="https://reactjs.org"
