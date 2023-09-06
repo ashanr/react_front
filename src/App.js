@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-function App({}) {
+function App() {
 
   const [emotion, setEmotion] = useState("happy");
 
@@ -15,15 +15,8 @@ function App({}) {
           Hello from {emotion}
         </p>
         <button onClick={() => setEmotion("sad")}>Sad</button>
-        <button onClick={() => setEmotion("sad")}>Happy</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => setEmotion("happy")}>Happy</button> 
+     
       </header>
     </div>
   );
