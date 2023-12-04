@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './components/Homepage';
+import Login from './Login';
+// Import other components as needed
 
 function App() {
-
-  const [emotion, setEmotion] = useState("happy");
-
-  console.log(emotion);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello from {emotion}
-        </p>
-        <button onClick={() => setEmotion("sad")}>Sad</button>
-        <button onClick={() => setEmotion("happy")}>Happy</button> 
-     
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<Login />} />
+        // Define other routes as needed
+      </Routes>
+    </Router>
   );
 }
 
